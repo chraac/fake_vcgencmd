@@ -60,4 +60,16 @@ case ${1} in
         echo "version ${kern} (${arch})"
         exit
         ;;
+    get_throttled)
+        # TODO read the throttling values of rock64
+        # See also: https://forums.raspberrypi.com/viewtopic.php?f=63&t=147781&start=50#p972790
+        # Definitions from raspberrypi: 
+        #   0: under-voltage
+        #   1: arm frequency capped
+        #   2: currently throttled 
+        #   16: under-voltage has occurred
+        #   17: arm frequency capped has occurred
+        #   18: throttling has occurred
+        echo 'throttled=0x0'
+        ;;
 esac
